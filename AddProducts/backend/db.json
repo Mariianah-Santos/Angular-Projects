@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Barcelona Camisa Torcedor Feminino",
+      "price": 399.99
+    },
+    {
+      "id": 2,
+      "name": "Barcelona Kit Feminino",
+      "price": 599.99
+    },
+    {
+      "id": 3,
+      "name": "Barcelona bóne",
+      "price": 109
+    }
+  ]
+}
