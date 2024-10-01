@@ -1,0 +1,12 @@
+.sidenav {
+    background-color: purple;
+    width: 200px;
+}
+
+.sidenav i {
+    padding-right: 10px;
+}
+
+.sidenav .nav-list {
+    align-items: center;
+}
