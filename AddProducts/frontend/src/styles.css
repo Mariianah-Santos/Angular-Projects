@@ -3,9 +3,6 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.purple {
-    color: blueviolet;
-}
 .v-middle { /* class criada para centraliza elementos na mesma linha */
     vertical-align: middle;
 }

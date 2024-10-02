@@ -1,0 +1,13 @@
+.home {
+    background-color: #fff;
+}
+.home .title {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 300;
+    color: black;
+}
+.home .subTitle {
+    font-size: 1.1rem;
+    color: rgb(107, 104, 104);
+}

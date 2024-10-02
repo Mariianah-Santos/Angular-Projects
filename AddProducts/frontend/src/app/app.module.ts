@@ -11,23 +11,39 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
+import { HomeComponent } from './views/home/home.component';
+import { ProductCrudComponent } from './views/product-crud/product-crud.component';
+import { PurpleDirective } from './directives/purple.directive';
+import { ForDirective } from './directives/for.directive';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component'; // criação de cards
 
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
+// biblioteca Material
+import { MatToolbarModule } from '@angular/material/toolbar'; // criação de navbar
+import { MatSidenavModule } from '@angular/material/sidenav'; // criação da navbar ao lado
+import { MatListModule } from '@angular/material/list'; // criação de lista
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent,
+    ProductCrudComponent,
+    PurpleDirective,
+    ForDirective,
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [
     provideClientHydration(),
