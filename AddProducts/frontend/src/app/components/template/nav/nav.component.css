@@ -3,12 +3,9 @@
     width: 200px;
 }
 
-.sidenav i {
+.nav-list i{
+    vertical-align: middle;
     padding-right: 10px;
-}
-
-.sidenav .nav-list {
-    align-items: center;
 }
 
 .content {
