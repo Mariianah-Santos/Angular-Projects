@@ -1,0 +1,16 @@
+{
+  "animals": [
+    {
+      "name": "Lucky",
+      "type": "Cachorro",
+      "age": 2,
+      "id": "368a"
+    },
+    {
+      "name": "Lucy",
+      "type": "Gato",
+      "age": 5,
+      "id": "afa0"
+    }
+  ]
+}
