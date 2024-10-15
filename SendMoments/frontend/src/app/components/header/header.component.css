@@ -1,0 +1,27 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #777;
+    padding: 1em;
+}
+.menu, .brand {
+    display: flex;
+    align-items: center;
+}
+.menu li {
+    list-style: none;
+    padding: 10px;
+    margin-right: 1em;
+}
+.brand img {
+    width: 40px;
+    margin-right: 0.6em;
+}
+
+.brand h2 {
+    transition: .4s;
+}
+.brand:hover > h2 {
+    color: #dec129;
+}
