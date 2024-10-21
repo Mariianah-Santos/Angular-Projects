@@ -4,8 +4,11 @@
     align-items: center;
     flex-direction: column;
 }
+.home h1 {
+    margin-bottom: 1em;
+}
 
-.home-container h1 {
+.moments-container h3 {
     margin-bottom: 0.5em;
 }
 

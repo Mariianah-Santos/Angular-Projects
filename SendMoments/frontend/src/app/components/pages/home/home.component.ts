@@ -23,15 +23,15 @@ export class HomeComponent implements OnInit{
   }
 
   ngOnInit(): void {
-      this.momentService.getMoment().subscribe((items) => {
-        const data = items.data;
-        data.map((items) => {
-          items.created_at = new Date(items.created_at!).toLocaleDateString('pt-br');
-        });
-
-        this.allMoments = data;
-        this.moments = data;
+     this.momentService.getMoments().subscribe((items) => {
+      const data = items.data;
+      data.map((item) => {
+        item.created_at = new Date(item.created_at!).toLocaleDateString("pt-BR")
       });
+
+      this.allMoments = data;
+      this.moments = data;
+     });
   }
 
   search(e: Event): void {

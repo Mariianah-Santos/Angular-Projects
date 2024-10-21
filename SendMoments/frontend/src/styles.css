@@ -18,6 +18,7 @@ a:hover {
     color: #dec129;
 }
 
+/*  FORMS */
 form {
     width: 450px;
     margin: 0 auto;
@@ -63,4 +64,36 @@ input[type="submit"]:hover {
     border-left: 1px solid #DC3545;
     padding-left: .2em;
     font-weight: bold;
+}
+
+/*  BUTTONS */
+
+.edit-btn, .remove-btn {
+    border: 1px solid #efefef;
+    padding: 0.4em 1em;
+    font-size: 1em;
+    margin:  0 0.5em;
+    cursor: pointer;
+    background-color: #fff;
+    transition: 0.4s;
+}
+
+.edit-btn, .edit-btn path {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.edit-btn:hover, .edit-btn:hover path {
+    color: #fff;
+    background-color: #007bff;
+}
+
+.remove-btn, .remove-btn path {
+    border-color: #DC3545;
+    color: #DC3545;
+}
+
+.remove-btn:hover, .remove-btn:hover path {
+    color: #fff;
+    background-color: #DC3545;
 }
