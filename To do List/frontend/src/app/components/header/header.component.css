@@ -1,0 +1,12 @@
+.header {
+    border-bottom: 2px solid #86d69a;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 5em;
+}
+.header a{
+    color: #86d69a;
+    font-size: 16px;
+    text-decoration: none;
+}

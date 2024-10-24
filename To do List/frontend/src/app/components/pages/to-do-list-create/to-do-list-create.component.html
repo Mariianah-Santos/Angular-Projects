@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="title">
+        <h2>Adicinar uma nova tarefa</h2>
+    </div>
+    <div class="input-box">
+        <input type="text" placeholder="Digite uma nova tarefa aqui..." [(ngModel)]="list.title">
+    </div>
+    <div class="btn">
+        <button id="btn-add" (click)="createList()">Adicionar</button>
+        <button id="btn-cancel" (click)="cancel()">Cancelar</button>
+    </div>
+</div>

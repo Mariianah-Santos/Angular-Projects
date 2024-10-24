@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 2.5rem;
+}
+.title {
+    text-align: center; 
+}
+
+.btn-add {
+    position: absolute;
+    right: 20px; /* Alinha o botão à direita */
+}
+
+.btn-add button{
+    background-color: #86d69a;
+    color: white;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+} 
+
+.btn-add button:hover {
+    background-color: #5fdb7e;
+}

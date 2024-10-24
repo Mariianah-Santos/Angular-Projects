@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.input-box {
+    border: 1px solid #86d69a;
+    width: 50%;
+}

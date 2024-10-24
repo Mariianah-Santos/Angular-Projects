@@ -1,0 +1,10 @@
+<app-to-do-list-crud></app-to-do-list-crud>
+
+<!-- <div *ngIf="toDoList.length > 0; else noList">
+
+</div> -->
+
+<ng-template #noList>
+    <h1>Não há nenhuma tarefa no Momento</h1>
+    <a routerLink="/listCreate">Crie sua Lista de Tarefas</a>
+</ng-template>
