@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1em;
+    width: 100%;
+}
+
+.input-box {
+    display: flex; /* Use flexbox para alinhar o input e o label corretamente */
+    align-items: center;
+    border-bottom: 2px solid #86d69a;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .1);
+    border-right: 2px solid #86d69a;
+    width: 600px;
+    margin-top: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px; /* Adiciona espaçamento interno */
+    transition: background-color 0.3s;
+}
+
+.input-box input {
+    cursor: pointer;
+    margin-right: 1rem;
+    flex-shrink: 0; /* Evita que o checkbox encolha */
+}
+
+.input-box label {
+    flex-grow: 1; /* O label ocupa o espaço restante */
+    cursor: pointer;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.container h3 {
+    font-weight: 600;
+    margin-top: 6rem;
+}
+
+.container span {
+    color: #86d69a;
+}
+
+.container a {
+    text-decoration: none;
+    color: #5fdb7e;
+    margin-top: .5em;
+    font-weight: 400;
+    text-align: center;
+}
+
+.input-box input[type="checkbox"]:checked + label {
+    color: rgba(0, 0, 0, 0.5); /* Muda a cor do texto para um tom mais claro */
+    text-decoration: none; /* Remove a linha cruzada, se houver */
+}

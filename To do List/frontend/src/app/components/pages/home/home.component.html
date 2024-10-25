@@ -1,10 +1,21 @@
 <app-to-do-list-crud></app-to-do-list-crud>
-
-<!-- <div *ngIf="toDoList.length > 0; else noList">
-
-</div> -->
-
-<ng-template #noList>
-    <h1>Não há nenhuma tarefa no Momento</h1>
-    <a routerLink="/listCreate">Crie sua Lista de Tarefas</a>
-</ng-template>
+<div class="container">
+    <div *ngIf="toDoList.length > 0; else noList">
+        <div class="input-box" *ngFor="let list of toDoList" (click)="clickCheckbox($event, list.title)">
+            <input type="checkbox" id="{{ list.title }}" (click)="$event.stopPropagation()">
+            <label for="{{ list.title }}">{{ list.title }}</label>
+        </div>
+        <div class="action">
+            <a>
+                <fa-icon [icon]="faEdit">Editar</fa-icon>
+            </a>
+            <a>
+                <fa-icon [icon]="faTimes">Editar</fa-icon>
+            </a>
+        </div>
+    </div>
+    <ng-template #noList>
+        <h3>Não há nenhuma <span>Tarefa</span> no Momento</h3>
+        <a routerLink="/listCreate">Crie sua Lista de Tarefas</a>
+    </ng-template>
+</div>

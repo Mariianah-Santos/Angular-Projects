@@ -43,6 +43,10 @@ export class ListserviceService implements OnInit{
   closeMessage(): void {
     this.message = null;
   }
+
+  readList(): Observable<ToDoList[]> {
+    return this.http.get<ToDoList[]>(this.baseUrl);
+  }
 }
 
 
