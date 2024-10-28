@@ -2,16 +2,18 @@
 <div class="container">
     <div *ngIf="toDoList.length > 0; else noList">
         <div class="input-box" *ngFor="let list of toDoList" (click)="clickCheckbox($event, list.title)">
-            <input type="checkbox" id="{{ list.title }}" (click)="$event.stopPropagation()">
-            <label for="{{ list.title }}">{{ list.title }}</label>
-        </div>
-        <div class="action">
-            <a>
-                <fa-icon [icon]="faEdit">Editar</fa-icon>
-            </a>
-            <a>
-                <fa-icon [icon]="faTimes">Editar</fa-icon>
-            </a>
+            <div class="list-container">
+                <input type="checkbox" id="{{ list.title }}" (click)="$event.stopPropagation()">
+                <label for="{{ list.title }}">{{ list.title }}</label>
+            </div>
+            <div class="action">
+                <a routerLink="/listEdit/{{ list.id }}" (click)="$event.stopPropagation()" id="edit">
+                    <fa-icon [icon]="faEdit"></fa-icon>
+                </a>
+                <a (click)="deletList(list);  $event.stopPropagation()" id="delet">
+                    <fa-icon [icon]="faTimes"></fa-icon>
+                </a>
+            </div>
         </div>
     </div>
     <ng-template #noList>

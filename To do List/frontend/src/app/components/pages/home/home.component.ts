@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ToDoList } from '../../ToDoList';
 import { ListserviceService } from '../../services/listservice.service';
 import { faEdit, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,8 @@ export class HomeComponent implements OnInit{
   faEdit = faEdit;
   faTimes = faTimes;
 
-  constructor(private listService: ListserviceService) {
+
+  constructor(private listService: ListserviceService, private router: Router) {
    
   }
 
@@ -42,5 +44,24 @@ export class HomeComponent implements OnInit{
     event.preventDefault();  // Impede que o evento adicional seja executado
   }
 
+
+  editList(item: any) {
+
+  }
+//   deleteList(list: ToDoList): void {
+//     if (list.id) {  // Verifica se o id está definido
+//       this.listService.delete(list.id).subscribe(() => {
+//         this.toDoList = this.toDoList.filter(i => i.id !== list.id);
+//       });
+//     } else {
+//       console.error('ID is undefined. Cannot delete the item.');
+//     }
+//   }
+// }
+  deletList(list: ToDoList): void {
+    this.listService.delete(list.id!).subscribe(() => {
+      this.toDoList = this.toDoList.filter(i => i.id !== list.id);
+    });
+  }
 }
 

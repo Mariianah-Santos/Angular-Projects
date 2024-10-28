@@ -6,34 +6,62 @@
     margin-top: 1em;
     width: 100%;
 }
-
 .input-box {
-    display: flex; /* Use flexbox para alinhar o input e o label corretamente */
+    display: flex;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    gap: 1em;
+}
+.list-container {
+    display: flex;
+    align-items: center;
+    width: 600px;
     border-bottom: 2px solid #86d69a;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, .1);
     border-right: 2px solid #86d69a;
-    width: 600px;
+    padding: 5px;
     margin-top: 1em;
     border-radius: 5px;
     cursor: pointer;
-    padding: 5px; /* Adiciona espaçamento interno */
     transition: background-color 0.3s;
 }
-
-.input-box input {
+.list-container label {
+    margin-left: .8em;
+    font-size: 1.1em;
     cursor: pointer;
-    margin-right: 1rem;
-    flex-shrink: 0; /* Evita que o checkbox encolha */
-}
-
-.input-box label {
-    flex-grow: 1; /* O label ocupa o espaço restante */
-    cursor: pointer;
-    font-size: 18px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    flex-grow: 1;
+}
+.list-container input {
+    cursor: pointer;
+    flex-shrink: 0; /* Evita que o checkbox encolha */
+}
+
+.list-container input[type="checkbox"]:checked + label {
+    color: rgba(0, 0, 0, 0.3); /* Muda a cor do texto para um tom mais claro */
+    text-decoration: none; /* Remove a linha cruzada, se houver */
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.action fa-icon {
+    font-size: 18px;
+}
+#edit {
+    color: #f5f531;
+    cursor: pointer;
+}
+
+#delet {
+    color: #d11b28;
+    cursor: pointer;
 }
 
 .container h3 {
@@ -52,8 +80,6 @@
     font-weight: 400;
     text-align: center;
 }
-
-.input-box input[type="checkbox"]:checked + label {
-    color: rgba(0, 0, 0, 0.5); /* Muda a cor do texto para um tom mais claro */
-    text-decoration: none; /* Remove a linha cruzada, se houver */
+.active {
+    background-color: #5fdb7e;
 }

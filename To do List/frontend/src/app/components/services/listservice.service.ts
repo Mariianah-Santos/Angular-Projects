@@ -47,6 +47,16 @@ export class ListserviceService implements OnInit{
   readList(): Observable<ToDoList[]> {
     return this.http.get<ToDoList[]>(this.baseUrl);
   }
+
+  editList(list: ToDoList): Observable<ToDoList> {
+    const url = `${this.baseUrl}/${list.id}`;
+    return this.http.put<ToDoList>(url, list);
+  }
+
+  delete(id: string | number): Observable<ToDoList> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete<ToDoList>(url);
+  }
 }
 
 

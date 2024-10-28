@@ -1,5 +1,5 @@
 export interface ToDoList {
-    id?: number;
+    id?: string | number;
     title: string;
     isStrikethrough?: boolean;
 }
