@@ -1,0 +1,27 @@
+<div class="main-container">
+    <div class="container">
+        <!-- campo titulo -->
+        <h3>Criar uma nova lista de Compras!</h3> 
+
+        <div class="input-box" >
+            <!-- campo para os titulos -->
+            <input type="text" placeholder="Digite o Titulo..."[(ngModel)]="listProducts.title">
+
+            <!-- campo para os itens -->
+            <div *ngFor="let input of listProducts.subtitle; let i = index; trackBy: trackByIndex">
+                <input type="text"  [(ngModel)]="listProducts.subtitle[i]" placeholder="Item...">
+            </div>
+        </div>
+
+        <!-- botao para adicionar itens a lista -->
+        <button class="toggleBtn" (click)="addItem()"> + </button>
+        
+        <div class="btn-group">
+            <!-- campo usado para adiconar o itens no banco de dados -->
+            <button id="add" (click)="addProduct()">Adicionar</button>
+
+            <!-- campo utilizado para cancelar a ação -->
+            <button id="cancel" (click)="cancel()">Cancelar</button>
+        </div>
+    </div>
+</div>

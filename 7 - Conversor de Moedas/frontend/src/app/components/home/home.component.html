@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="box">
+        <h2>Conversor de Moedas</h2>
+        <p>Faça conversão de moedas de maneira fácil e rápida usando a ferramenta gratuita</p>
+    <div>
+    <div class="input-group">
+        <div class="input-box">
+            <label for="baseCurrency">Moeda Base:</label>
+            <input type="text" id="baseCurrency" [(ngModel)]="baseCurrency">
+    
+            <label for="targetCurrency">Moeda Alvo:</label>
+            <input type="text" id="targetCurrency" [(ngModel)]="targetCurrency">
+        </div>
+        <div class="input-box">
+            <label for="amount">Quantidade:</label>
+            <input type="number" id="amount" [(ngModel)]="amount">
+        </div>
+
+        <button class="btn-main" (click)="convert()">Converter</button>
+
+        <p *ngIf="result">{{ amount }} {{ baseCurrency }} = {{ result }} {{ targetCurrency }}</p>
+    </div>
+</div>

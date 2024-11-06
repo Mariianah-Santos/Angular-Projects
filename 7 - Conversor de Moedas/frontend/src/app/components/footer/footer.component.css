@@ -1,0 +1,22 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    font-size: 1.1em;
+    height: 80px;
+    background: var(--blueDark3);
+    color: white;
+    gap: 10px;
+}
+footer span {
+    margin-right: 1rem;
+    font-weight: bold;
+    color: black;
+}
+footer fa-icon {
+    color: var(--red);
+    font-size: 1.2em;
+}

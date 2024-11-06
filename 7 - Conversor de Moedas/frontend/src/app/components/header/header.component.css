@@ -1,0 +1,16 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background: var(--blueDark3);
+    color: var(--white);
+    gap: 10px;
+}
+main h1 {
+    font-size: 1.5em;
+}
+main fa-icon {
+    color: var(--gold);
+    font-size: 1.2em;
+}

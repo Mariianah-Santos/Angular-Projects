@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.container .input-box {
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+.container .input-box input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border-bottom: 2px solid var(--blueLight1);
+    border-right: 2px solid var(--blueLight1);
+    border-left: 2px solid var(--blueLight1);
+    text-indent: 5px;
+}
+
+.btn-group {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+.btn-group button {
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+}
+.btn-group #add {
+    background-color: var(--blue);
+}
+
+.btn-group #cancel {
+    background-color:  #d11b28;;
+}
+.toggleBtn {
+    border: 2px solid var(--blue);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    position: absolute;
+    right: 32%;
+    top: 38%;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--blue);
+    font-size: 16px;
+}
+
+.toggleBtn button {
+    text-align: center;
+}
+
