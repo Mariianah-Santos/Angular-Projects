@@ -1,0 +1,66 @@
+@import url('https://fonts.cdnfonts.com/css/seldom-scene');
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--greyDark);
+    height: 60px;
+    font-family: "Poppins", serif;
+    color: var(--white);
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title a{
+    font-size: 2em;
+    font-family: 'Seldom Scene', sans-serif;
+    margin-left: 1rem;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    cursor: pointer;
+}
+.menu a {
+    display: inline-block;
+    transition: border-bottom 0.3s ease;
+    border-bottom: 1px solid transparent;
+    font-size: .8em;
+    text-decoration: none;
+    color: var(--white);
+}
+.menu a:hover {
+    color: var(--greyLight);
+    border-bottom: 1px solid var(--greyLight);
+}
+
+.btn-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 1rem;
+    /* border: 1px solid var(--white); */
+    padding: 10px;
+    border-radius: 5px;
+}
+.btn-header .line {
+    background-color: var(--white);
+    height: 10px;
+    width: 1px;
+}
+
+.btn-header button {
+    cursor: pointer;
+    color: var(--white);
+    border: none;
+    background-color: transparent;
+    font-size: .8em;
+}

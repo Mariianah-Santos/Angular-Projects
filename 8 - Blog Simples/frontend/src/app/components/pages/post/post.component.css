@@ -1,0 +1,21 @@
+* {
+    font-family: "Poppins", serif;
+    font-size: 1.1em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    flex-direction: column;
+}
+.container span {
+    color: var(--greyDark);
+    font-weight: 600;
+}
+
+.container a {
+    font-weight: 400;
+    color: var(--greyDark);
+}

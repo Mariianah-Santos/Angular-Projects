@@ -1,0 +1,23 @@
+.footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    bottom: 0;
+    position: fixed;
+    justify-content: flex-end;
+    height: 60px;
+    background-color: var(--greyDark);
+    color: var(--white);
+    font-family: "Poppins", serif;
+    font-size: 1em;
+}
+
+.footer span {
+    font-weight: bold;
+    color: var(--black);
+    margin-right: 1rem;
+}
+.footer fa-icon {
+    color: var(--red);
+    margin-right: .8rem;
+}
