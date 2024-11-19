@@ -1,0 +1,6 @@
+<h1 [ngStyle]="{'color': 'green'}">Mariana Santos</h1>
+<h1 [ngStyle]="{'color': condicao ? 'green' : 'red'}">Mariana Santos</h1>
+
+<ul>
+    <li *ngFor="let l of lista" [ngStyle]="{'color': l == 'Aprovado' ? 'green' : 'red'}">{{ l }}</li>
+</ul>

@@ -1,0 +1,73 @@
+<div class="click1">
+    <!-- Event binding criado para exibir uma mensagem de alert -->
+    <button (click)="mensagem()">Click aqui</button>
+</div>
+
+<div class="click2">
+    <!-- Função criada para exibir uma mensagem de texto na página depois do click -->
+    <button (click)="showText()">Mostra Texto</button>
+    
+    <!-- A mensagem/texto que será mostrado -->
+    <p *ngIf="textDisable">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+</div>
+
+<div class="dbclick">
+    <!-- Função para mostra uma mensagem depois de ois click -->
+    <button (dblclick)="dbClick()">Clique duas vezes</button>
+    <p *ngIf="showTextdbClick">Apertou duas vezes</p>
+
+    <!-- Função criada para editar alguma mensagem ou texto -->
+    <p>Editar o texto abaixo</p>
+    <div (dblclick)="editClick()" *ngIf="!isEditing">{{ text }}</div>
+    <input *ngIf="isEditing" [(ngModel)]="text" (blur)="editClick()">
+</div>
+
+<div class="change">
+    <!-- Função criada para exibir uma mensagem e alteração -->
+    <p>vai mostra as alterações que fez no input</p>
+    <input type="text" (change)="onInput($event)">
+
+    <!-- Função para detecta erros de validação de email -->
+    <p>vai informar erros ao colocar caracteres invalidas em email</p>
+    <input type="text" (change)="emailValid($event)">
+    <p *ngIf="emailError" class="error">Email invalido</p>
+</div>
+
+<div class="keydown">
+    <!-- função criada para dispara toda vez que o usuario aperta uma tecla do teclado -->
+    <p>vamos saber quais teclas voce apertou</p>
+    <input type="text" (keydown)="keydown($event)">
+
+    <!-- função criada para receber apenas numeros -->
+     <p>apenas numeros</p>
+    <input type="text" (keydown)="number($event)">
+</div>
+
+<div class="keypress">
+    <p>vou saber quais teclas voce esta pressionando</p>
+    <input type="text" (keypress)="keypress($event)">
+
+    <p>vai mostrar quantas teclas foi apertadas</p>
+    <input type="text" (keypress)="countCharacters($event)"> 
+    <p>Caracteres digitados: {{ charCount }}</p>
+</div>
+
+<div class="keyup">
+    <!-- função para saber quais teclas voce apertou e soltou -->
+    <p>Vou saber quais teclas voce pressionou e estao livr ou solta</p>
+    <input type="text" (keyup)="onKeyUp($event)">
+</div>
+
+<form (submit)="onSubmit($event)"> 
+    <div> 
+        <label for="username">Nome de Usuário:</label> 
+        <input type="text" id="username" name="username"> 
+    </div> 
+    <div> 
+        <label for="email">Email:</label>
+         <input type="email" id="email" name="email"> 
+    </div> 
+    <button type="submit">Enviar</button> 
+</form>
+<p *ngIf="submitError" class="error">Por favor, preencha todos os campos corretamente.</p>
+
