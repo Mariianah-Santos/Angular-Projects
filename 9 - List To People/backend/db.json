@@ -1,3 +1,16 @@
 {
-  "people": []
+  "people": [
+    {
+      "id": "c428",
+      "name": "Mariana",
+      "age": 24,
+      "city": "Olinda"
+    },
+    {
+      "id": "ba48",
+      "name": "chaves",
+      "age": 31,
+      "city": "Recife"
+    }
+  ]
 }
