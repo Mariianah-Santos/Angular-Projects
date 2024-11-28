@@ -1,0 +1,104 @@
+<form class="container" [formGroup]="formGroup">
+    <div class="input-group">
+        <div class="input-input">
+
+            <!-- NAME -->
+            @if (formGroup.get('name').hasError('required') && formGroup.get('name').touched) {
+                <div class="error">
+                    <div class="line"></div>
+                    <p class="alert">O campo Nome é obrigatório!</p>
+                </div>
+            }
+
+            @if (formGroup.get('name').hasError('minlength') && formGroup.get('name').touched) {
+                <div class="error">
+                    <div class="line"></div>
+                    <p class="alert">O campo Nome precisa conter pelo menos 3 caracteres</p>
+                </div>
+            }
+            <input type="text" formControlName="name" placeholder="Nome" class="form-control">
+
+            <!-- IDADE -->
+            @if (formGroup.get('age').hasError('required') && formGroup.get('age').touched) {
+                <div class="error">
+                    <div class="line"></div>
+                    <p class="alert">O campo Idade é obrigatório!</p>
+                </div>
+            }
+
+            @if (formGroup.get('age').hasError('min') && formGroup.get('age').touched) {
+                <div class="error">
+                    <div class="line"></div>
+                    <p class="alert">O campo Idade não aceita números inferiores a 0</p>
+                </div>
+            }
+
+            @if (formGroup.get('age').hasError('max') && formGroup.get('age').touched) {
+                <div class="error">
+                    <div class="line"></div>
+                    <p class="alert">O campo Idade não aceita números maiores que 120</p>
+                </div>
+            }
+            <input type="number" formControlName="age" placeholder="idade" class="form-control">
+
+            <!-- CIDADE -->
+            @if (formGroup.get('city').hasError('required') && formGroup.get('city').touched) {
+                <div class="error">
+                    <div class="line"></div>
+                    <p class="alert">O campo Cidade é obrigatório!</p>
+                </div>
+            }
+
+            @if (formGroup.get('city').hasError('minlength') && formGroup.get('city').touched) {
+                <div class="error">
+                    <div class="line"></div>
+                    <p class="alert">O campo Cidade precisa conter pelo menos 3 caracteres</p>
+                </div>
+            }
+            <input type="text" formControlName="city" placeholder="Cidade" class="form-control">
+        </div>
+    
+        <div class="input-button">
+            @if(btnSignup) {
+                <input type="button" value="Cadastrar" (click)="createSignup()" class="btn btn-primary" [disabled]="formGroup.invalid">
+            } @else {
+                <input type="button" value="Alterar" class="btn-toggle"  (click)="edit()" [disabled]="formGroup.invalid">
+                <input type="button" value="Excluir" class="btn-remove" (click)="deletPerson(id)">
+                <input type="button" value="Cancelar" class="btn-cancel" (click)="cancel()">
+            }
+        </div>
+    </div>
+    
+</form>
+
+<!-- linhas com coluas para entenimento das informações do usuario -->
+<table class="table">
+    <thead class="table-header">
+        <tr class="table-line">
+            <th>#</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Cidade</th>
+            <th>Selecionar</th>
+        </tr>
+    </thead>
+
+<!-- tabela criada para mostras as pessoas cadastradas -->
+    <tbody class="table-people">
+        <tr *ngFor="let p of pessoa; index as indice">
+            <td>{{ p.id }}</td>
+            <td>{{ p.name }}</td>
+            <td>{{ p.age }}</td>
+            <td>{{ p.city }}</td>
+            <td><button (click)="select(p.id)">Selecionar</button></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<!-- criado para mostra se não houver uma lista existente -->
+<ng-template [ngIf]="pessoa.length === 0">
+    <div class="noList">
+        <h3>Não há <span>Pessoas cadastradas</span> na Lista</h3>
+    </div>
+</ng-template>
