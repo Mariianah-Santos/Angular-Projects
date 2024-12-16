@@ -1,0 +1,24 @@
+<form class="container"  [formGroup]="formGroup">
+    <div class="box">
+        <h5>Deleta um <span>Contato</span></h5>
+        <div class="input-group">
+            <div class="input-box">
+                <label for="name">Nome:</label>
+                <input type="text" placeholder="Nome" id="name" formControlName="name">
+            </div>
+
+            <div class="input-box">
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Email" id="email" formControlName="email">
+            </div>
+            <div class="input-box">
+                <label for="tel">Telefone:</label>
+                <input type="text" formControlName="telephone" placeholder="xxxxxxxx" id="tel" maxlength="11" (input)="validateNumber($event)">
+            </div>
+        </div>
+        <div class="btn-group">
+            <button id="btn-add" (click)="deletList()">Deleta</button>
+            <button (click)="cancel()" id="btn-cancel">Cancelar</button>
+        </div>
+    </div>
+</form>

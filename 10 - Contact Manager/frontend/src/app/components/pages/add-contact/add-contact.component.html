@@ -1,0 +1,55 @@
+<form class="container"  [formGroup]="formGroup">
+    <div class="box">
+        <h5>Adiconar um novo <span>Contato</span></h5>
+        <div class="input-group">
+            <div class="input-box">
+                <label for="name">Nome:</label>
+                <input type="text" placeholder="Nome" id="name" formControlName="name">
+                <div *ngIf="formGroup.get('name').hasError('required') && formGroup.get('name').touched">
+                    <div class="error">
+                        <div class="line"></div>
+                        <p class="alert">O campo Nome é obrigatório!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Email" id="email" formControlName="email">
+                <div *ngIf="formGroup.get('email').hasError('required') && formGroup.get('email').touched">
+                    <div class="error">
+                        <div class="line"></div>
+                        <p class="alert">O campo Email é obrigatório!</p>
+                    </div>
+                </div>
+                <div *ngIf="formGroup.get('email').hasError('email') && formGroup.get('email').touched">
+                    <div class="error">
+                        <div class="line"></div>
+                        <p class="alert">Use um Email válido!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="input-box">
+                <label for="tel">Telefone:</label>
+                <input type="text" formControlName="telephone" placeholder="xxxxxxxx" id="tel" maxlength="11" (input)="validateNumber($event)">
+
+                <div *ngIf="formGroup.get('telephone').hasError('required') && formGroup.get('telephone').touched">
+                    <div class="error">
+                        <div class="line"></div>
+                        <p class="alert">O campo Telefone é obrigatório!</p>
+                    </div>
+                </div>
+                <div *ngIf="formGroup.get('telephone').hasError('minlength') && formGroup.get('telephone').touched">
+                    <div class="error">
+                        <div class="line"></div>
+                        <p class="alert">O campo Telefone tem que ter 11 digitos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-group">
+            <button id="btn-add" (click)="createList()" [disabled]="formGroup.invalid">Adiciona</button>
+            <button (click)="cancel()" id="btn-cancel">Cancelar</button>
+        </div>
+    </div>
+</form>

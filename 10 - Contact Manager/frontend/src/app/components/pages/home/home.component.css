@@ -1,0 +1,104 @@
+/* TABELA  */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+
+}
+
+.table th, .table td {
+    border: 2px solid var(--blue); 
+    padding: 8px;
+}
+
+.table-line td {
+    font-weight: 600;
+}
+
+.lista-contact td {
+    font-size: 14px;
+}
+
+.btn-edit-del {
+    text-align: center;
+}
+.btn-edit-del i{
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.btn-edit-del .edit  {
+    color: var(--yellow);
+}
+
+.btn-edit-del .delet {
+    color: var(--red);
+}
+
+/* ICONE DO BOTAO DE ADD */
+
+.btn-plus {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+}
+
+.btn-plus i {
+    cursor: pointer;
+    font-size: 40px;
+    color: var(--green);
+}
+
+ /* ADICIONA UMA MENSAGEM QUANDO PASSA O MOUSE PELO ICONE */
+
+/* .custom-tooltip { 
+    position: relative; 
+    cursor: pointer; 
+}  */
+
+.custom-tooltip::after { 
+    font-size: 10px;
+    content: attr(data-tooltip); 
+    position: absolute; 
+    bottom: 26%; 
+    transform: translateX(-50%); 
+    background-color: var(--green); 
+    color: #fff; 
+    padding: 5px; 
+    border-radius: 5px; 
+    white-space: nowrap; 
+    visibility: hidden; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    right: 10px;
+} 
+.custom-tooltip:hover::after { 
+    visibility: visible; 
+    opacity: 1; 
+}
+
+/* MENSAGEM DE ERRO PARA QUANDO NÃO TIVER NENHUM REGISTRO */
+
+.noList {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 20px;
+   font-weight: 400;
+}
+
+.noList span {
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.noList a {
+    color: var(--blue);
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+

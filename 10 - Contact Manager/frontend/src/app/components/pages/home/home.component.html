@@ -1,0 +1,38 @@
+<table class="table">
+    <thead class="table-header">
+        <tr class="table-line">
+            <td>ID</td>
+            <td>Nome</td>
+            <td>Email</td>
+            <td>Telefone</td>
+            <td>Ações</td>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let lista of agenda" class="lista-contact">
+            <td>{{ lista.id }}</td>
+            <td>{{ lista.name }}</td>
+            <td>{{ lista.email }}</td>
+            <td>{{ lista.telephone }}</td>
+            <td class="btn-edit-del">
+                <i class="bi bi-pencil-square edit" routerLink="/editContact/{{ lista.id }}"></i>
+                <i class="bi bi-trash3-fill delet" routerLink="/deletContact/{{ lista.id }}"></i>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div class="btn-plus" *ngIf="agenda.length > 0">
+    <i class="bi bi-plus-circle-fill custom-tooltip" routerLink="/addContact" data-tooltip="Adicionar Contato"></i>
+</div>
+
+
+<!-- função criada para em casos de erros de não haver nada na lista  -->
+<ng-template [ngIf]="agenda.length === 0">
+    <div class="noList">
+        <p>Não há <span>contatos</span> na sua lista. <a routerLink="/addContact">Adicione</a> um novo contato</p>
+    </div>
+</ng-template>
+
